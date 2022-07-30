@@ -1,0 +1,10 @@
+@import "../global/style.global.scss";
+
+body {
+    background-color: black;
+}
+
+.App {
+    height: 100vh;
+    @include flex();
+}

@@ -1,0 +1,11 @@
+.Card {
+    background-color: aliceblue;
+}
+
+.Card {
+    width: 50vw;
+
+    &__image {
+        width: 30%;
+    }
+}
