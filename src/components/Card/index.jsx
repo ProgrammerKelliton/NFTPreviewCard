@@ -1,4 +1,8 @@
 import Img from "../../assets/image/image-equilibrium.jpg";
+import IconCoin from "../../assets/icon/icon-ethereum.svg";
+import IconClock from "../../assets/icon/icon-clock.svg";
+import ImgAvatar from "../../assets/image/image-avatar.png";
+
 import "./style.scss";
 
 export default function Card() {
@@ -12,18 +16,30 @@ export default function Card() {
 
             <div className="Card__info">
                 <div className="info__value">
-                    <img className="value__icon" src="" alt="" />
+                    <img
+                        className="value__icon"
+                        src={IconCoin}
+                        alt="icon coin"
+                    />
                     <span className="value__valueCoin">0.041 ETH</span>
                 </div>
 
                 <div className="info__date">
-                    <img className="date__icon" src="" alt="" />
+                    <img
+                        className="date__icon"
+                        src={IconClock}
+                        alt="icon clock"
+                    />
                     <span className="date__days">3 days left</span>
                 </div>
             </div>
 
             <div className="Card__creator">
-                <img className="creator__avatar" src="" alt="" />
+                <img
+                    className="creator__avatar"
+                    src={ImgAvatar}
+                    alt="image avatar"
+                />
                 <span className="creator__name">Creation of </span>
                 <span className="creator__name--color">Jules Wyvern</span>
             </div>
