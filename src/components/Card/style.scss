@@ -7,7 +7,7 @@
         font-weight: 600;
 
         &:hover {
-            color: #00fff7;
+            color: $textColor_three;
         }
     }
     &__desc {
@@ -23,9 +23,42 @@
     align-items: baseline;
     flex-direction: column;
     gap: 1rem;
+}
 
-    &__image {
-        width: 100%;
+.Card__coin {
+    &:hover::after {
+        content: url("../../assets/icon/icon-view.svg");
+        background-color: #00fff7b7;
+    }
+    .coin__image {
+        &:hover {
+            opacity: 50%;
+        }
+    }
+    &:hover::after,
+    .coin__image {
+        border-radius: 10px;
+    }
+}
+
+.Card__coin {
+    @include flex();
+
+    .coin__image {
+        width: $widthMax;
+    }
+    &:hover::after {
+        position: absolute;
+        animation: fillPadding 0.2s linear forwards;
+    }
+}
+
+@keyframes fillPadding {
+    0% {
+        padding: 0;
+    }
+    100% {
+        padding: calc((max(300px, 25%) / 2) - 1.55rem);
     }
 }
 
@@ -33,7 +66,7 @@
     @include flex();
     justify-content: space-between;
 
-    width: 100%;
+    width: $widthMax;
 
     .info__value,
     .info__date {
@@ -43,7 +76,7 @@
 }
 
 .value__valueCoin {
-    color: #00fff7;
+    color: $textColor_three;
     font-weight: 600;
 }
 
@@ -53,12 +86,12 @@
 }
 
 .Card__creator {
-    width: 100%;
+    width: $widthMax;
 
     &::before {
         content: "";
         display: block;
-        width: 100%;
+        width: $widthMax;
         height: 1px;
         margin: 10px 0;
     }
@@ -85,7 +118,7 @@
         font-weight: 400;
 
         &:hover {
-            color: #00fff7;
+            color: $textColor_three;
         }
     }
 }

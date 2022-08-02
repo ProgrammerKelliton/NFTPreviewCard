@@ -8,7 +8,10 @@ import "./style.scss";
 export default function Card() {
     return (
         <div className="Card">
-            <img className="Card__image" src={Img} alt="image" />
+            <div className="Card__coin">
+                <img className="coin__image" src={Img} alt="Image coin"></img>
+            </div>
+
             <h1 className="Card__title">Equilibrium #34297</h1>
             <p className="Card__desc">
                 Our Equilibrium collection promotes balance and calm.
