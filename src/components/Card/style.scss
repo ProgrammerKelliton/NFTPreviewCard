@@ -28,11 +28,11 @@
 .Card__coin {
     &:hover::after {
         content: url("../../assets/icon/icon-view.svg");
-        background-color: #00fff7b7;
+        background-color: #00fff791;
     }
     .coin__image {
         &:hover {
-            opacity: 50%;
+            filter: blur(5px);
         }
     }
     &:hover::after,
@@ -49,15 +49,6 @@
     }
     &:hover::after {
         position: absolute;
-        animation: fillPadding 0.2s linear forwards;
-    }
-}
-
-@keyframes fillPadding {
-    0% {
-        padding: 0;
-    }
-    100% {
         padding: calc((max(300px, 25%) / 2) - 1.55rem);
     }
 }
@@ -120,5 +111,14 @@
         &:hover {
             color: $textColor_three;
         }
+    }
+}
+
+@media (min-width: 1200px) {
+    .Card {
+        width: max(300px, 15%);
+    }
+    .Card__coin:hover::after {
+        padding: calc((max(300px, 15%) / 2) - 1.55rem);
     }
 }
